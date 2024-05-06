@@ -1,0 +1,29 @@
+spring:
+    application:
+        name: ai-assistant
+    datasource:
+        url: jdbc:h2:mem:db
+        username: sa
+        password: 
+        driver-class-name: org.h2.Driver
+    jpa:
+        database-platform: org.hibernate.dialect.H2Dialect
+        hibernate:
+            ddl-auto: create-drop
+    h2: 
+        console:
+            enabled: true
+            path: /h2-console
+            settings:
+                web-allow-others: true
+    ai: 
+        openai: 
+            api-key: ${OPENAI_KEY}
+            chat:
+                options: 
+                    model: gpt-3.5-turbo
+assistant: 
+    auth: 
+        secret-key: ${AUTH_SECRET_KEY:test}
+
+            
