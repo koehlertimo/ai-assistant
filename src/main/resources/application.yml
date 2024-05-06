@@ -26,6 +26,6 @@ assistant:
     auth: 
         secret-key: ${AUTH_SECRET_KEY:test}
 server:
-    port: 80
+    port: 8080
 
             
