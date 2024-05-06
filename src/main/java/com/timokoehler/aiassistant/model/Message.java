@@ -8,6 +8,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.Lob;
 import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,7 +22,9 @@ public class Message {
     @Id
     @GeneratedValue
     private long id;
+    @Lob
     private String question;
+    @Lob
     private String answer;
     private LocalDateTime createdAt;
 
